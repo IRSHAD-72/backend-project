@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema({
   dateOfJoining: { type: Date },
 });
 
-// Check if model is already defined before creating it
 const User = mongoose.models.User || mongoose.model("User", userSchema);
 
 export default User;
