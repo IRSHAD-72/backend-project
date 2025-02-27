@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 
-// Middleware for authentication
 export const authenticateToken = (req, res, next) => {
   const token = req.header('Authorization')?.replace('Bearer ', '');
 
@@ -12,7 +11,7 @@ export const authenticateToken = (req, res, next) => {
     if (err) {
       return res.status(403).json({ message: 'Invalid or expired token.' });
     }
-    req.user = user; // Store user info in request
+    req.user = user; 
     next();
   });
 };
