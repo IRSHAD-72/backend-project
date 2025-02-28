@@ -2,6 +2,7 @@ import express from 'express';
 import { connectDB } from './config/db.js';  
 import userRoutes from './routes/userRoutes.js';
 import auth from './routes/auth.js'
+import cors from 'cors';
 
 const app = express();
 const port = 3000;
